@@ -1,0 +1,128 @@
+<div class="jumbotron" style="padding: 20px 20px 20px 20px;">
+    <h1 class="text-center text-primary" style="padding: 20px 20px 20px 20px;">
+      <b>Form Edit Profile</b>
+    </h1>
+
+    <form [formGroup]="registForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="namaLengkap">Nama Lengkap</label>
+        <input
+              formControlName="namaLengkap"
+              type="text"
+              id="namaLengkap"
+              [ngModel]="nama"
+              class="form-control"
+              placeholder="Masukkan Nama Lengkap"
+              [ngClass]="{ 'is-invalid': submitted && feditprof.namaLengkap.errors }"
+              
+        />
+            <div *ngIf="submitted && feditprof.namaLengkap.errors" class="invalid-feedback">
+              <div *ngIf="feditprof.namaLengkap.errors.required">
+                *Nama Lengkap tidak boleh kosong
+              </div>
+            </div>
+    </div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input
+              formControlName="username"
+              type="text"
+              id="username"
+              [ngModel]="username"
+              class="form-control"
+              placeholder="Masukkan Username"
+              [ngClass]="{ 'is-invalid': submitted && feditprof.username.errors}"
+        />
+        <div *ngIf="submitted && feditprof.username.errors" class="invalid-feedback">
+            <div *ngIf="feditprof.username.errors.required">
+                *Username tidak boleh kosong
+            </div> 
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input
+            formControlName="email"
+            type="email"
+            id="email"
+            [ngModel]="email"
+            class="form-control"
+            placeholder="Masukkan E-mail"
+            [ngClass]="{ 'is-invalid': submitted && feditprof.email.errors }"
+        />
+        <div *ngIf="submitted && feditprof.email.errors" class="invalid-feedback">
+            <div *ngIf="feditprof.email.errors.required">
+              *Email tidak boleh kosong
+            </div>
+        </div>
+    </div>
+        <!-- jenis kelamin -->
+    <div class="form-group">
+        <h4 for="jenisKelamin">Jenis Kelamin</h4>
+        <select
+            formControlName="jenisKelamin"
+            class="form-control"
+            [ngClass]="{
+              'is-invalid': submitted && feditprof.jenisKelamin.errors
+            }">
+            <option value>-- Pilih Kategori --</option>
+            <option>Laki-Laki</option>
+            <option>Perempuan</option>
+        </select>
+        <div
+            *ngIf="submitted && feditprof.jenisKelamin.errors"
+            class="invalid-feedback">
+            <div
+              *ngIf="feditprof.jenisKelamin.errors.required"
+              class="text-danger">
+              *Pilih salah satu Kategori
+            </div>
+        </div>
+    </div>
+        <!-- kota sekarang -->
+    <div class="form-group">
+    <label for="kotaSekarang">Kota Sekarang</label>
+        <input
+            formControlName="kotaSekarang"
+            type="text"
+            id="kotaSekarang"
+            [ngModel]="kotaSekarang"
+            class="form-control"
+            placeholder="Masukkan Kota"
+            [ngClass]="{ 'is-invalid': submitted && feditprof.kotaSekarang.errors }"
+            
+        />
+        <div *ngIf="submitted && feditprof.kotaSekarang.errors" class="invalid-feedback">
+            <div *ngIf="feditprof.kotaSekarang.errors.required">
+              *Kota tidak boleh kosong
+            </div>
+        </div>
+        </div>
+
+    <div class="form-group">
+        <h4 for="tanggalLahir">Tanggal Lahir</h4>
+        <div>
+        <input
+              formControlName="tanggalLahir"
+              class="form-control"
+              type="date"
+              [ngModel]="tglLahir"
+              id="tanggalLahir"
+              [ngClass]="{ 'is-invalid': submitted && feditprof.tanggalLahir.errors }"
+        />
+        <div
+              *ngIf="submitted && feditprof.tanggalLahir.errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="feditprof.tanggalLahir.errors.required" class="text-danger">
+                *Tanggal Lahir tidak boleh kosong
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" value="regist" class="btn btn-primary" style="margin-right: 20px; min-width: 80px;">
+        Ubah
+    </button>
+    </form>
+</div>

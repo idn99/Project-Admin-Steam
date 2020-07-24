@@ -1,0 +1,116 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="padding: 20px 20px 20px 20px;">
+
+
+    <img src="assets/logo.jpg" alt="" style="width: 40px; height: 35px; border-radius: 10px 10px 10px 10px; margin-right: 10px;">
+    <!-- Navbar brand -->
+    <span class="navbar-brand">Steam Mobil</span>
+  
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link">Home
+            
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['list-pesanan']">Pesanan</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item active dropdown" id="dropdown">
+            <span class="sr-only">(current)</span>
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenu" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Layanan</a>
+            <div class="dropdown-menu dropdown-primary" id="dropdown-child" aria-labelledby="navbarDropdownMenu   ">
+              <a class="dropdown-item" href="#">List Layanan</a>
+              <a class="dropdown-item" href="#">Tambah Layanan</a>
+            </div>
+        </li>
+  
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" id="dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Karyawan</a>
+          <div class="dropdown-menu dropdown-primary" id="dropdown-child" aria-labelledby="navbarDropdownMenu   ">
+            <a class="dropdown-item" href="#">List Kayawan</a>
+          </div>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" id="dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenu" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Admin</a>
+            <div class="dropdown-menu dropdown-primary" id="dropdown-child" aria-labelledby="navbarDropdownMenu   ">
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" [routerLink]="['admin']">Logout</a>
+            </div>
+        </li>
+  
+      </ul>
+      <!-- Links -->
+    </div>
+  
+  </nav>
+<!--/.Navbar-->
+
+<!-- menu -->
+
+<div class="jumbotron">
+    <h2>Tambah Layanan</h2>
+</div>
+
+<div class="container">
+    <form
+      >
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+            <label for="nama">Nama Layanan</label>
+            <input
+              formControlName="namaUser"
+              type="text"
+              id="nama"
+              class="form-control"
+              placeholder="Masukkan Nama"/>
+              <!-- [ngClass]="{ 'is-invalid': submitted && fbooking.namaUser.errors }"
+            />
+            <div
+              *ngIf="submitted && fbooking.namaUser.errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="fbooking.namaUser.errors.required" class="text-danger">
+                *Nama tidak boleh kosong
+              </div>
+            </div> -->
+          </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+            <label for="nama">Jenis Mobil</label>
+            <input
+              formControlName="namaUser"
+              type="text"
+              id="nama"
+              class="form-control"
+              placeholder="Masukkan Nama"/>
+              <!-- [ngClass]="{ 'is-invalid': submitted && fbooking.namaUser.errors }"
+            />
+            <div
+              *ngIf="submitted && fbooking.namaUser.errors"
+              class="invalid-feedback"
+            >
+              <div *ngIf="fbooking.namaUser.errors.required" class="text-danger">
+                *Nama tidak boleh kosong
+              </div>
+            </div> -->
+          </div>
+      </div>
+    </div>
+    </form>
+</div>
+    

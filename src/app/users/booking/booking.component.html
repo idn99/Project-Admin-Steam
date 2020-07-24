@@ -1,0 +1,180 @@
+<div>
+  <h1 class="text-center">Form Booking</h1>
+  <hr class="bg-dark" style="width: 70%;">
+</div>
+<div style="font-size: 18px;">
+  <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <h4 for="nama">Nama Pelanggan</h4>
+      <input
+        formControlName="namaUser"
+        type="text"
+        id="nama"
+        class="form-control"
+        placeholder="Masukkan Nama"
+        [ngClass]="{ 'is-invalid': submitted && fbooking.namaUser.errors }"
+      />
+      <div
+        *ngIf="submitted && fbooking.namaUser.errors"
+        class="invalid-feedback"
+      >
+        <div *ngIf="fbooking.namaUser.errors.required" class="text-danger">
+          *Nama tidak boleh kosong
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <h4 for="alamat">Alamat Lengkap</h4>
+      <input
+        formControlName="alamatLengkap"
+        type="text"
+        id="alamat"
+        class="form-control"
+        placeholder="Masukkan Alamat Lengkap"
+        [ngClass]="{
+          'is-invalid': submitted && fbooking.alamatLengkap.errors
+        }"
+      />
+      <div
+        *ngIf="submitted && fbooking.alamatLengkap.errors"
+        class="invalid-feedback"
+      >
+        <div
+          *ngIf="fbooking.alamatLengkap.errors.required"
+          class="text-danger"
+        >
+          *Alamat tidak boleh kosong
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <h4 for="telp">Nomor Telepon</h4>
+      <input
+        formControlName="nomorTelepon"
+        type="tel"
+        id="tepl"
+        class="form-control"
+        placeholder="Masukkan Nomor Telepon"
+        [ngClass]="{
+          'is-invalid': submitted && fbooking.nomorTelepon.errors
+        }"
+      />
+      <div
+        *ngIf="submitted && fbooking.nomorTelepon.errors"
+        class="invalid-feedback"
+      >
+        <div
+          *ngIf="fbooking.nomorTelepon.errors.required"
+          class="text-danger"
+        >
+          *Nomor Telepon tidak boleh kosong
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <h4 for="tanggalwaktu">Waktu Steam</h4>
+      <div>
+        <input
+          formControlName="waktu"
+          class="form-control"
+          type="datetime-local"
+          value="2011-08-19T13:45:00"
+          id="tanggalwaktu"
+          [ngClass]="{ 'is-invalid': submitted && fbooking.waktu.errors }"
+        />
+        <div
+          *ngIf="submitted && fbooking.waktu.errors"
+          class="invalid-feedback"
+        >
+          <div *ngIf="fbooking.waktu.errors.required" class="text-danger">
+            *Jam steam tidak boleh kosong
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <h4 for="jenisMobil">Jenis Mobil</h4>
+      <select
+        formControlName="jenisMobil"
+        class="form-control"
+        [ngClass]="{
+          'is-invalid': submitted && fbooking.jenisMobil.errors
+        }"
+      >
+        <option value>-- Pilih Kategori --</option>
+        <option>Kecil</option>
+        <option>Sedang</option>
+        <option>Besar</option>
+      </select>
+      <div
+        *ngIf="submitted && fbooking.jenisMobil.errors"
+        class="invalid-feedback"
+      >
+        <div
+          *ngIf="fbooking.jenisMobil.errors.required"
+          class="text-danger"
+        >
+          *Pilih salah satu Kategori
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <h4 for="jenisSteam">Jenis Steam</h4>
+      <select
+        class="form-control"
+        formControlName="jenisSteam"
+        [ngClass]="{
+          'is-invalid': submitted && fbooking.jenisSteam.errors
+        }"
+      >
+        <option value>-- Pilih Kategori --</option>
+        <option>Biasa</option>
+        <option>Spesial</option>
+      </select>
+      <div
+        *ngIf="submitted && fbooking.jenisSteam.errors"
+        class="invalid-feedback"
+      >
+        <div
+          *ngIf="fbooking.jenisSteam.errors.required"
+          class="text-danger"
+        >
+          *Pilih salah satu Kategori
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <h4>Pesan</h4>
+      <textarea
+        formControlName="pesan"
+        rows="10"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && fbooking.pesan.errors }"
+      >
+      </textarea>
+      <div
+        *ngIf="submitted && fbooking.pesan.errors"
+        class="invalid-feedback"
+      >
+        <div *ngIf="fbooking.pesan.errors.required" class="text-danger">
+          *Pesan tidak boleh kosong
+        </div>
+      </div>
+    </div>
+    <button
+      type="submit"
+      value="kirim"
+      class="btn btn-primary"
+      style="min-width: 75px;"
+    >
+      Booking
+    </button>
+    <button
+      type="reset"
+      class="btn btn-primary"
+      style="margin-left: 30px; min-width: 75px;"
+    >
+      Batal
+    </button>
+  </form>
+</div>

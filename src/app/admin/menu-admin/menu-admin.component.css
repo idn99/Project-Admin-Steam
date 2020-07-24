@@ -1,0 +1,22 @@
+#navbarDropdownMenu {
+    border: none;
+    cursor: pointer;
+}
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+#dropdown-child {
+    display: none;
+    background-color: #91c0fa;
+    min-width: 200px;
+}
+#dropdown-child a {
+    color: #5d6063;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+}
+#dropdown:hover #dropdown-child {
+    display: block;
+}

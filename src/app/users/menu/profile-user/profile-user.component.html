@@ -1,0 +1,48 @@
+<table class="table">
+    <tbody *ngFor="let data of dataUser">
+      <tr>
+        <th></th>
+        <td>
+          <button type="button" class="btn btn-outline-success float-right" (click)="onEdit()">
+            Edit Profile
+          </button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Nama </th>
+        <td>: 
+            {{data.fullName}}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Username </th>
+        <td>: 
+            {{data.username}}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Email </th>
+        <td>: 
+            {{data.email}}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Jenis Kelamin </th>
+        <td>: 
+            {{data.jenisKelamin}}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Tanggal Lahir </th>
+        <td>: 
+            {{data.tanggalLahir}}
+        </td>
+      </tr>
+      <tr>
+        <th scope="row">Kota Sekarang </th>
+        <td>: 
+            {{data.kotaSekarang}}
+        </td>
+      </tr>
+    </tbody>
+</table>

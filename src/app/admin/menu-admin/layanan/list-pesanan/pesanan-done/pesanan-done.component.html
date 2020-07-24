@@ -1,0 +1,49 @@
+<h1 class="text-center">Pesanan Selesai</h1>
+<hr style="width: 75%;">
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Nama Pelanggan</th>
+        <th scope="col">Alamat Lengkap</th>
+        <th scope="col">No. Telepon</th>
+        <th scope="col">Waktu Steam</th>
+        <th scope="col">Jenis Mobil</th>
+        <th scope="col">Jenis Steam</th>
+        <th scope="col">Pesan</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let datas of dataBook">
+        <th scope="row">
+            {{datas.id}}
+        </th>
+        <td>
+            {{datas.namaPelanggan}}
+        </td>
+        <td>
+            {{datas.alamatLengkap}}
+        </td>
+        <td>
+            {{datas.nomorTelepon}}
+        </td>
+        <td>
+            {{datas.waktuSteam}}
+        </td>
+        <td>
+            {{datas.jenisMobil}}
+        </td>
+        <td>
+            {{datas.jenisSteam}}
+        </td>
+        <td>
+            {{datas.pesan}}
+        </td>
+        <td>
+            {{datas.status}}
+        </td>
+      </tr>
+    </tbody>
+</table>

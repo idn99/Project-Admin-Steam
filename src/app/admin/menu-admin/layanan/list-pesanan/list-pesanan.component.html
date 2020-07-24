@@ -1,0 +1,61 @@
+<nav class="row text-center bg-primary" id="nav">
+    <div class="col">
+        <h2 (click)="onDoneClick()">Pesanan Selesai</h2>
+    </div>
+    <div class="col">
+        <h2 (click)="onpClick()">Pesanan OnProgress</h2>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+
+<!-- 
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Nama Pelanggan</th>
+        <th scope="col">Alamat Lengkap</th>
+        <th scope="col">No. Telepon</th>
+        <th scope="col">Waktu Steam</th>
+        <th scope="col">Jenis Mobil</th>
+        <th scope="col">Jenis Steam</th>
+        <th scope="col">Pesan</th>
+        <th scope="col">Status</th>
+        <th scope="col">Opsi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let datas of dataBook">
+        <th scope="row">
+            {{datas.id}}
+        </th>
+        <td>
+            {{datas.namaPelanggan}}
+        </td>
+        <td>
+            {{datas.alamatLengkap}}
+        </td>
+        <td>
+            {{datas.nomorTelepon}}
+        </td>
+        <td>
+            {{datas.waktuSteam}}
+        </td>
+        <td>
+            {{datas.jenisMobil}}
+        </td>
+        <td>
+            {{datas.jenisSteam}}
+        </td>
+        <td>
+            {{datas.pesan}}
+        </td>
+        <td>
+            {{datas.status}}
+        </td>
+        <td>
+            <button type="button" class="btn btn-success" (click)="doneClick(datas.id)">Done</button>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->

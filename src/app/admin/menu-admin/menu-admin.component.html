@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand">Menu Admin</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+          <a class="nav-link" [routerLink]="['profile-admin']">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['list-pesanan']">Pesanan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['list-layanan']">Layanan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="clikLogout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div id="container" style="margin: 20px 100px 100px 100px;">
+  <div class="row jumbotron" style="padding: 15px 15px 15px 15px;">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
