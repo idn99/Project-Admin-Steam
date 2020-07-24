@@ -1,6 +1,7 @@
 <table class="table">
     <thead class="thead-dark">
       <tr>
+        <th scope="col">No.</th>
         <th scope="col">Nama Pelanggan</th>
         <th scope="col">Alamat Lengkap</th>
         <th scope="col">No. Telepon</th>
@@ -12,7 +13,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let datas of dataBook">
+      <tr *ngFor="let datas of dataBook; index as i">
+        <th scope="row">
+            {{i+1}}
+        </th>
         <td>
             {{datas.namaPelanggan}}
         </td>

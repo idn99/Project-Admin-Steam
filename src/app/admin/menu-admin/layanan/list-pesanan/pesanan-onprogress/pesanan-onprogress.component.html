@@ -17,9 +17,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let datas of dataBook">
+      <tr *ngFor="let datas of dataBook; index as i">
         <th scope="row">
-            {{datas.id}}
+            {{i + 1}}
         </th>
         <td>
             {{datas.namaPelanggan}}

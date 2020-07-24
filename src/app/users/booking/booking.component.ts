@@ -66,7 +66,16 @@ export class BookingComponent implements OnInit {
     this.service.addBoking(createBook).subscribe((data) => {
       console.log(data)
       alert("Berhasil Booking")
-      this.router.navigate([''])
+      this.bookingForm.setValue({
+        namaUser: ' ',
+        alamatLengkap: ' ',
+        nomorTelepon: ' ',
+        waktu: ' ',
+        jenisMobil: ' ',
+        jenisSteam: ' ',
+        pesan: ' ',
+      });
+      // this.router.navigate([''])
     });
   }
 

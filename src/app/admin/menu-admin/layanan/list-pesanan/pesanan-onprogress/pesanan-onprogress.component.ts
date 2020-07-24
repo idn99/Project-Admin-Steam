@@ -44,6 +44,7 @@ export class PesananOnprogressComponent implements OnInit {
       for(let data of this.getData){
         const doneData = {
           "id": data.id,
+          "idUser": data.idUser,
           "namaPelanggan": data.namaPelanggan,
           "alamatLengkap": data.alamatLengkap,
           "nomorTelepon": data.nomorTelepon,
